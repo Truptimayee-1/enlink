@@ -65,7 +65,9 @@
     </ng-template>
     <ng-template pTemplate="body" let-data>
       <tr>
-        <td style="width: 15%">{{ data.date }}</td>
+        <td style="width: 15%">
+          {{ data.date | customDate | date: "medium" }}
+        </td>
         <td style="width: 35%">{{ data.imeiNumber }}</td>
         <td style="width: 15%">{{ data.pvOrDCVoltage }}</td>
         <td style="width: 15%">{{ data.pvCurrent }}</td>

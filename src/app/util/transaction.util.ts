@@ -31,14 +31,10 @@ export class TransactionUtil {
     return map;
   }
 
-  converToDate(pDate: string) {
-    let Start_Date = new Date("01-6-2022")
-    let mydate = new Date();
-    if (mydate) {
+  converToDate(pDate: string): any {
+    if (pDate) {
       if (pDate.includes('T')) {
         return new Date(pDate.replace('T', ' '));
-
-
       }
     }
     return pDate;
